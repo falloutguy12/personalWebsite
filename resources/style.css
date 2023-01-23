@@ -20,6 +20,14 @@ h3 {
     font-size: 1.5rem;
   }
 
+.redLine {
+    position: fixed;
+    width: 0.25rem;
+    height: 100%;
+    left: 13rem;
+    background-color: #c01717;
+}
+
 /* Header start */
 
 header {
@@ -32,7 +40,7 @@ header {
     padding: 0 1rem;
 }
 
-nav {
+nav { /* hidden later to keep spacing for small screens */
     background-color: #E5E5E5;
     border: 1px solid #cecece;
     display: flex;
@@ -65,14 +73,137 @@ nav li:last-child {
     font-weight: bold;
 }
 
+/* Header end */
 
 
   /* About me section start */
+
+.aboutMe  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+}
+
 .fadingImgContainer img {
-    display: block;
     max-width: 100%;
+    z-index: -1;
 }
 
 .fadingImgContainer {
     max-width: 19.3rem;
+    display: flex;
+    margin-right: 20rem;
+    transform: translateY(-5.5rem);
 }
+
+.aboutMeTxtContainer {
+    max-width: 14rem;
+    display: flex;
+    margin-right: .5rem;
+}
+
+/* Img container animation */
+
+.img2, .img3, .img4, .img5 {
+    display: none;
+}
+
+.fadingImgContainer:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(131, 2, 2, 1), rgba(255, 4, 4, 1));
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Img container animation */
+
+  /* About me section end */
+.skill-and-projects-container {
+    display: flex;
+    max-width: 100%;
+    height: 25rem;
+}
+
+/* skills section start */
+.skills {
+    width: 75%;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+}
+
+.skillsContentContainer {
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+
+
+.skillsList{
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.skillsList li {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.skillsList img {
+    max-width: 4rem; 
+}
+
+
+/* skills section end */
+
+
+
+/* Projects section start */
+.projects {
+    width: 25%;
+    color: white;
+    background-color: black;
+    padding-left: 2rem;
+}
+
+
+
+/* Projects section end */
+
+/* Footer start */
+
+.footerContentContainer {
+    margin-left: 13.5rem;
+}
+
+.footerContentContainer ul {
+    list-style: none;
+    margin-left: 2rem;
+}
+
+
+.footerContentContainer h3 {
+    margin-bottom: 0.8rem;
+}
+
+.footerContentContainer li a {
+    color: #b70000;
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-shadow: 1px 1px #D9D9D9;
+}
+
+.staggerLink {
+    margin-left: 1.5rem;
+    line-height: 2;
+}
+
+/* Footer end */
