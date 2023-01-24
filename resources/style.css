@@ -28,6 +28,23 @@ h3 {
     background-color: #c01717;
 }
 
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
 /* Header start */
 
 header {
@@ -87,7 +104,6 @@ nav li:last-child {
 
 .fadingImgContainer img {
     max-width: 100%;
-    z-index: -1;
 }
 
 .fadingImgContainer {
@@ -95,6 +111,7 @@ nav li:last-child {
     display: flex;
     margin-right: 20rem;
     transform: translateY(-5.5rem);
+    overflow: hidden;
 }
 
 .aboutMeTxtContainer {
@@ -105,6 +122,8 @@ nav li:last-child {
 
 /* Img container animation */
 
+
+
 .img2, .img3, .img4, .img5 {
     display: none;
 }
@@ -112,25 +131,32 @@ nav li:last-child {
 .fadingImgContainer:before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, rgba(131, 2, 2, 1), rgba(255, 4, 4, 1));
-    transform: translate(-50%, -50%);
+    transform: translateY(-100%);
     z-index: 1;
+    background-color: black;
+    animation: slideDown 1s ease-out 2s  forwards, slideUp 1s linear 4s forwards;
 }
+
+
+
 
 /* Img container animation */
 
-  /* About me section end */
+/* About me section end */
+  
+  
+/* skills section start */
+
 .skill-and-projects-container {
     display: flex;
     max-width: 100%;
     height: 25rem;
 }
 
-/* skills section start */
 .skills {
     width: 75%;
     background-color: #D9D9D9;
